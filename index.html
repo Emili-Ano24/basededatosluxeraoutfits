@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>🏆 Mundialista Pro | Inventario de Jerseys</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="dashboard">
+    <!-- SIDEBAR EQUIPOS (MENÚ) -->
+    <div class="equipos-sidebar" id="equiposSidebar">
+        <div class="sidebar-header">
+            <h3>⚽ EQUIPOS ⚽</h3>
+        </div>
+        <div id="equiposList"></div>
+        <div class="reset-filtro" id="resetFiltroBtn">🌍 Mostrar TODOS los equipos</div>
+    </div>
+
+    <div class="main-content">
+        <div class="hero">
+            <div class="title-section">
+                <h1>🏆 MUNDIALISTA PRO 🏆</h1>
+                <p>Selecciona un equipo en el menú lateral · Acciones por jersey</p>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <div class="gender-selector">
+                    <button class="gender-btn active" data-gender="men">👨 HOMBRE</button>
+                    <button class="gender-btn" data-gender="women">👩 MUJER</button>
+                </div>
+                <div class="stats-mini">
+                    <div><span id="totalUnidadesDisplay">0</span> uds</div>
+                    <div><span id="totalValorDisplay">0</span> MXN</div>
+                </div>
+            </div>
+        </div>
+        <div class="toolbar">
+            <div class="btn-group">
+                <button class="btn-mundial btn-add" id="openModalBtn">➕ Nuevo Jersey</button>
+                <button class="btn-mundial btn-save" id="saveAllBtn">💾 Guardar</button>
+                <button class="btn-mundial reset-btn" id="resetDataBtn">🔄 Restaurar</button>
+            </div>
+            <div><small>📌 Acciones: ▼ por cada jersey</small></div>
+        </div>
+        <div class="table-wrapper">
+            <table class="inventory-table" id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>Equipo</th><th>Modelo</th><th>XS</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th><th>Total</th><th>Precio</th><th>Valor</th><th>⚡</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <div class="footer-total">🥅 Haz clic en un equipo para filtrar sus playeras</div>
+    </div>
+</div>
+
+<!-- Modal Agregar Jersey -->
+<div id="newItemModal" class="modal">
+    <div class="modal-card">
+        <h2>🏅 Nueva equipación</h2>
+        <input type="text" id="newEquipo" placeholder="Equipo" value="México">
+        <input type="text" id="newModelo" placeholder="Modelo">
+        <div class="tallas-modal-row">
+            <div class="talla-modal-item"><label>XS</label><input type="number" id="newXS" value="0"></div>
+            <div class="talla-modal-item"><label>S</label><input type="number" id="newS" value="0"></div>
+            <div class="talla-modal-item"><label>M</label><input type="number" id="newM" value="0"></div>
+            <div class="talla-modal-item"><label>L</label><input type="number" id="newL" value="0"></div>
+            <div class="talla-modal-item"><label>XL</label><input type="number" id="newXL" value="0"></div>
+            <div class="talla-modal-item"><label>XXL</label><input type="number" id="newXXL" value="0"></div>
+        </div>
+        <input type="number" id="newPrecio" placeholder="Precio MXN" value="550">
+        <div class="modal-buttons">
+            <button class="btn-mundial" id="confirmAddBtn">✅ Agregar</button>
+            <button class="btn-mundial reset-btn" id="closeModalBtn">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
