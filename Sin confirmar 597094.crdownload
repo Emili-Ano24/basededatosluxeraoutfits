@@ -1,0 +1,281 @@
+// ======================= DATOS HOMBRE (original excel) ===================
+let inventarioHombre = [
+    { id: 0, equipo: "México", modelo: "Adidas Jersey Visitante Selección Nacional de México 26", tallas: {XS:0, S:0, M:4, L:3, XL:1, XXL:0}, precio: 550 },
+    { id: 1, equipo: "México", modelo: "Adidas Jersey Retro Selección Nacional de México 86", tallas: {XS:0, S:0, M:0, L:1, XL:0, XXL:0}, precio: 650 },
+    { id: 2, equipo: "México", modelo: "Adidas Jersey Local Selección Nacional de México 26", tallas: {XS:0, S:0, M:4, L:1, XL:1, XXL:0}, precio: 550 },
+    { id: 3, equipo: "México", modelo: "Adidas Jersey Negra Selección Nacional de México 26", tallas: {XS:0, S:0, M:3, L:3, XL:0, XXL:0}, precio: 550 },
+    { id: 4, equipo: "Club León", modelo: "Jersey Oficial (Pendiente)", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id: 5, equipo: "Club León", modelo: "Segunda Equipación", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id: 6, equipo: "Chivas", modelo: "Jersey Local", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id: 7, equipo: "Chivas", modelo: "Jersey Visitante", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id: 8, equipo: "América", modelo: "Jersey Titular", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id: 9, equipo: "América", modelo: "Alternativo", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id:10, equipo: "Argentina", modelo: "Camiseta Albiceleste", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id:11, equipo: "Argentina", modelo: "Suplente", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id:12, equipo: "Portugal", modelo: "Equipación Principal", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id:13, equipo: "Portugal", modelo: "Alternativa", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id:14, equipo: "Real Madrid", modelo: "Local 2025", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id:15, equipo: "Real Madrid", modelo: "Visitante 2025", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id:16, equipo: "Barcelona", modelo: "Home kit", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id:17, equipo: "Barcelona", modelo: "Away", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id:18, equipo: "Cruz Azul", modelo: "Camiseta titular", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+    { id:19, equipo: "Cruz Azul", modelo: "Segunda piel", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 }
+];
+
+// DATOS MUJER
+let inventarioMujer = [
+    { id: 100, equipo: "México", modelo: "Adidas Jersey Visitante - Edición Mujer", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 500 },
+    { id: 101, equipo: "México", modelo: "Jersey Retro Femenino 86", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 590 },
+    { id: 102, equipo: "México", modelo: "Local Mujer 2026", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 520 },
+    { id: 103, equipo: "Club León", modelo: "Jersey Mujer Oficial", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 450 },
+    { id: 104, equipo: "Chivas", modelo: "Femenil Local", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 480 },
+    { id: 105, equipo: "América", modelo: "Jersey Mujer Titular", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 490 },
+    { id: 106, equipo: "Argentina", modelo: "Albiceleste Mujer", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 530 },
+    { id: 107, equipo: "Portugal", modelo: "Mujer Equipación", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 510 },
+    { id: 108, equipo: "Real Madrid", modelo: "Dama Local", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 600 },
+    { id: 109, equipo: "Barcelona", modelo: "Femenino Home", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 580 },
+    { id: 110, equipo: "Cruz Azul", modelo: "Jersey Femenil", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 470 }
+];
+
+let nextIdHombre = 20;
+let nextIdMujer = 111;
+let currentGender = "men";
+let currentData = inventarioHombre;
+let currentFilterEquipo = null;
+
+// helpers
+function calcTotal(tallas) {
+    return (tallas.XS||0)+(tallas.S||0)+(tallas.M||0)+(tallas.L||0)+(tallas.XL||0)+(tallas.XXL||0);
+}
+
+function calcValorItem(item) {
+    return calcTotal(item.tallas) * item.precio;
+}
+
+function getFilteredData() {
+    if (!currentFilterEquipo) return currentData;
+    return currentData.filter(item => item.equipo.toLowerCase() === currentFilterEquipo.toLowerCase());
+}
+
+function getGlobalTotalsFiltered() {
+    let filtered = getFilteredData();
+    let totalUnits = 0, totalValue = 0;
+    filtered.forEach(item => { let t = calcTotal(item.tallas); totalUnits += t; totalValue += t * item.precio; });
+    return { totalUnits, totalValue };
+}
+
+function actualizarResumenGlobal() {
+    const { totalUnits, totalValue } = getGlobalTotalsFiltered();
+    document.getElementById('totalUnidadesDisplay').innerText = totalUnits;
+    document.getElementById('totalValorDisplay').innerText = totalValue.toFixed(2);
+}
+
+function cerrarTodosDropdowns() {
+    document.querySelectorAll('.action-dropdown').forEach(d => d.style.display = 'none');
+}
+
+function renderizarTabla() {
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+    const tallasKeys = ['XS','S','M','L','XL','XXL'];
+    const filtered = getFilteredData();
+    
+    filtered.forEach((item) => {
+        const row = tbody.insertRow();
+        
+        // Equipo
+        row.insertCell(0).innerHTML = `<span class="equipo-cell" style="display:block;">${item.equipo}</span>`;
+        
+        // Modelo
+        const cellModelo = row.insertCell(1);
+        cellModelo.className = 'modelo-cell';
+        cellModelo.innerText = item.modelo;
+        
+        // Tallas
+        tallasKeys.forEach(talla => {
+            const cell = row.insertCell();
+            const valor = item.tallas[talla] || 0;
+            cell.innerHTML = `<span class="talla-num">${valor}</span>`;
+        });
+        
+        // Total
+        const totalUni = calcTotal(item.tallas);
+        row.insertCell().innerText = totalUni;
+        
+        // Precio editable
+        const cellPrecio = row.insertCell();
+        const precioInput = document.createElement('input');
+        precioInput.type = 'number';
+        precioInput.value = item.precio;
+        precioInput.className = 'precio-input';
+        precioInput.addEventListener('change', (e) => {
+            let newPrice = parseFloat(e.target.value);
+            if(isNaN(newPrice)) newPrice = 0;
+            item.precio = newPrice;
+            renderizarTabla();
+            actualizarResumenGlobal();
+        });
+        cellPrecio.appendChild(precioInput);
+        
+        // Valor inventario
+        row.insertCell().innerText = `$${calcValorItem(item).toFixed(2)}`;
+        
+        // Menú acciones
+        const cellAction = row.insertCell();
+        cellAction.style.textAlign = 'center';
+        const menuDiv = document.createElement('div');
+        menuDiv.className = 'action-menu';
+        const triggerBtn = document.createElement('button');
+        triggerBtn.className = 'action-trigger';
+        triggerBtn.innerHTML = '▼';
+        const dropdown = document.createElement('div');
+        dropdown.className = 'action-dropdown';
+        
+        tallasKeys.forEach(talla => {
+            const tallaRow = document.createElement('div');
+            tallaRow.className = 'talla-row';
+            const tallaNameSpan = document.createElement('span');
+            tallaNameSpan.className = 'talla-name';
+            tallaNameSpan.innerText = talla;
+            const btnsDiv = document.createElement('div');
+            btnsDiv.className = 'btn-group-compact';
+            
+            const btnVender = document.createElement('button');
+            btnVender.innerText = 'Vender';
+            btnVender.className = 'btn-vender-c';
+            const btnComprar = document.createElement('button');
+            btnComprar.innerText = 'Comprar';
+            btnComprar.className = 'btn-comprar-c';
+            const btnMas = document.createElement('button');
+            btnMas.innerText = '+';
+            btnMas.className = 'btn-mas-c';
+            
+            btnVender.onclick = (e) => {
+                e.stopPropagation();
+                let val = item.tallas[talla] || 0;
+                if(val > 0) { 
+                    item.tallas[talla] = val - 1; 
+                    renderizarTabla(); 
+                    actualizarResumenGlobal(); 
+                    cerrarTodosDropdowns(); 
+                } else { 
+                    alert(`❌ Sin stock en ${talla}`);
+                }
+            };
+            
+            btnComprar.onclick = (e) => {
+                e.stopPropagation();
+                item.tallas[talla] = (item.tallas[talla] || 0) + 1;
+                renderizarTabla();
+                actualizarResumenGlobal();
+                cerrarTodosDropdowns();
+            };
+            
+            btnMas.onclick = (e) => {
+                e.stopPropagation();
+                item.tallas[talla] = (item.tallas[talla] || 0) + 1;
+                renderizarTabla();
+                actualizarResumenGlobal();
+                cerrarTodosDropdowns();
+            };
+            
+            btnsDiv.appendChild(btnVender);
+            btnsDiv.appendChild(btnComprar);
+            btnsDiv.appendChild(btnMas);
+            tallaRow.appendChild(tallaNameSpan);
+            tallaRow.appendChild(btnsDiv);
+            dropdown.appendChild(tallaRow);
+        });
+        
+        const footer = document.createElement('div');
+        footer.className = 'dropdown-footer';
+        footer.innerText = '⚡ Vender / Comprar / +';
+        dropdown.appendChild(footer);
+        
+        triggerBtn.onclick = (e) => {
+            e.stopPropagation();
+            cerrarTodosDropdowns();
+            dropdown.style.display = 'block';
+        };
+        
+        document.addEventListener('click', function(e) {
+            if(!menuDiv.contains(e.target)) dropdown.style.display = 'none';
+        });
+        
+        menuDiv.appendChild(triggerBtn);
+        menuDiv.appendChild(dropdown);
+        cellAction.appendChild(menuDiv);
+    });
+    
+    actualizarResumenGlobal();
+    actualizarMenuEquipos();
+}
+
+function actualizarMenuEquipos() {
+    const equiposSet = new Set();
+    currentData.forEach(item => equiposSet.add(item.equipo));
+    const equipos = Array.from(equiposSet).sort();
+    const container = document.getElementById('equiposList');
+    container.innerHTML = '';
+    
+    equipos.forEach(eq => {
+        const count = currentData.filter(i => i.equipo === eq).length;
+        const div = document.createElement('div');
+        div.className = 'equipo-item';
+        if (currentFilterEquipo === eq) div.classList.add('active');
+        div.innerHTML = `<span class="equipo-icon">⚽</span><span class="equipo-nombre">${eq}</span><span class="equipo-count">${count}</span>`;
+        div.onclick = () => {
+            currentFilterEquipo = eq;
+            renderizarTabla();
+            actualizarMenuEquipos();
+        };
+        container.appendChild(div);
+    });
+}
+
+function resetFiltro() {
+    currentFilterEquipo = null;
+    renderizarTabla();
+}
+
+function guardarEnLocalStorage() {
+    const dataToSave = {
+        inventarioHombre: inventarioHombre,
+        inventarioMujer: inventarioMujer,
+        nextIdHombre: nextIdHombre,
+        nextIdMujer: nextIdMujer
+    };
+    localStorage.setItem('mundial_pro_dual_v2', JSON.stringify(dataToSave));
+    alert('✅ Datos guardados correctamente');
+}
+
+function cargarDesdeLocalStorage() {
+    const saved = localStorage.getItem('mundial_pro_dual_v2');
+    if (saved) {
+        try {
+            const parsed = JSON.parse(saved);
+            inventarioHombre = parsed.inventarioHombre;
+            inventarioMujer = parsed.inventarioMujer;
+            nextIdHombre = parsed.nextIdHombre;
+            nextIdMujer = parsed.nextIdMujer;
+        } catch(e) { console.warn(e); }
+    }
+    if (currentGender === 'men') currentData = inventarioHombre;
+    else currentData = inventarioMujer;
+    renderizarTabla();
+}
+
+function resetToOriginal() {
+    inventarioHombre = [
+        { id: 0, equipo: "México", modelo: "Adidas Jersey Visitante Selección Nacional de México 26", tallas: {XS:0, S:0, M:4, L:3, XL:1, XXL:0}, precio: 550 },
+        { id: 1, equipo: "México", modelo: "Adidas Jersey Retro Selección Nacional de México 86", tallas: {XS:0, S:0, M:0, L:1, XL:0, XXL:0}, precio: 650 },
+        { id: 2, equipo: "México", modelo: "Adidas Jersey Local Selección Nacional de México 26", tallas: {XS:0, S:0, M:4, L:1, XL:1, XXL:0}, precio: 550 },
+        { id: 3, equipo: "México", modelo: "Adidas Jersey Negra Selección Nacional de México 26", tallas: {XS:0, S:0, M:3, L:3, XL:0, XXL:0}, precio: 550 },
+        { id: 4, equipo: "Club León", modelo: "Jersey Oficial (Pendiente)", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+        { id: 5, equipo: "Club León", modelo: "Segunda Equipación", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+        { id: 6, equipo: "Chivas", modelo: "Jersey Local", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+        { id: 7, equipo: "Chivas", modelo: "Jersey Visitante", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+        { id: 8, equipo: "América", modelo: "Jersey Titular", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+        { id: 9, equipo: "América", modelo: "Alternativo", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+        { id:10, equipo: "Argentina", modelo: "Camiseta Albiceleste", tallas: {XS:0,S:0,M:0,L:0,XL:0,XXL:0}, precio: 0 },
+        { id:11, equipo: "Argentina", modelo: "Suplente",
